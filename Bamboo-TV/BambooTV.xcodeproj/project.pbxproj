@@ -1,0 +1,386 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A494A6725506B43007CA56F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A494A6625506B43007CA56F /* Item.swift */; };
+		8A4A22BB254B15870019A11D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A22BA254B15870019A11D /* AppDelegate.swift */; };
+		8A4A22BD254B15870019A11D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A22BC254B15870019A11D /* SceneDelegate.swift */; };
+		8A4A22BF254B15870019A11D /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A22BE254B15870019A11D /* DetailVC.swift */; };
+		8A4A22C2254B15870019A11D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A4A22C0254B15870019A11D /* Main.storyboard */; };
+		8A4A22C4254B15880019A11D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A4A22C3254B15880019A11D /* Assets.xcassets */; };
+		8A4A22C7254B15880019A11D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A4A22C5254B15880019A11D /* LaunchScreen.storyboard */; };
+		8A4A22D1254B18830019A11D /* TableVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A22D0254B18830019A11D /* TableVc.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8A494A6625506B43007CA56F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		8A4A22B7254B15870019A11D /* BambooTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BambooTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A4A22BA254B15870019A11D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8A4A22BC254B15870019A11D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8A4A22BE254B15870019A11D /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		8A4A22C1254B15870019A11D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A4A22C3254B15880019A11D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A4A22C6254B15880019A11D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A4A22C8254B15880019A11D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A4A22D0254B18830019A11D /* TableVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVc.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A4A22B4254B15870019A11D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A494A6525506AFE007CA56F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A494A6625506B43007CA56F /* Item.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8A4A22AE254B15860019A11D = {
+			isa = PBXGroup;
+			children = (
+				8A4A22B9254B15870019A11D /* Bamboo-TV */,
+				8A4A22B8254B15870019A11D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A4A22B8254B15870019A11D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A4A22B7254B15870019A11D /* BambooTV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A4A22B9254B15870019A11D /* Bamboo-TV */ = {
+			isa = PBXGroup;
+			children = (
+				8A4A22BA254B15870019A11D /* AppDelegate.swift */,
+				8A4A22BC254B15870019A11D /* SceneDelegate.swift */,
+				8A725F4F2551AC730016487C /* Views */,
+				8A494A6525506AFE007CA56F /* Models */,
+				8A725F4D2551AC1B0016487C /* Controllers */,
+				8A725F502551ACAA0016487C /* Suport */,
+				8A4A22C8254B15880019A11D /* Info.plist */,
+			);
+			path = "Bamboo-TV";
+			sourceTree = "<group>";
+		};
+		8A725F4D2551AC1B0016487C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8A4A22D0254B18830019A11D /* TableVc.swift */,
+				8A4A22BE254B15870019A11D /* DetailVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8A725F4F2551AC730016487C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8A4A22C0254B15870019A11D /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8A725F502551ACAA0016487C /* Suport */ = {
+			isa = PBXGroup;
+			children = (
+				8A4A22C3254B15880019A11D /* Assets.xcassets */,
+				8A4A22C5254B15880019A11D /* LaunchScreen.storyboard */,
+			);
+			path = Suport;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A4A22B6254B15870019A11D /* BambooTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A4A22CB254B15880019A11D /* Build configuration list for PBXNativeTarget "BambooTV" */;
+			buildPhases = (
+				8A4A22B3254B15870019A11D /* Sources */,
+				8A4A22B4254B15870019A11D /* Frameworks */,
+				8A4A22B5254B15870019A11D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BambooTV;
+			productName = TabelViewNavigetor;
+			productReference = 8A4A22B7254B15870019A11D /* BambooTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A4A22AF254B15860019A11D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					8A4A22B6254B15870019A11D = {
+						CreatedOnToolsVersion = 12.1;
+					};
+				};
+			};
+			buildConfigurationList = 8A4A22B2254B15860019A11D /* Build configuration list for PBXProject "BambooTV" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A4A22AE254B15860019A11D;
+			productRefGroup = 8A4A22B8254B15870019A11D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A4A22B6254B15870019A11D /* BambooTV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A4A22B5254B15870019A11D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A4A22C7254B15880019A11D /* LaunchScreen.storyboard in Resources */,
+				8A4A22C4254B15880019A11D /* Assets.xcassets in Resources */,
+				8A4A22C2254B15870019A11D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A4A22B3254B15870019A11D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A494A6725506B43007CA56F /* Item.swift in Sources */,
+				8A4A22BF254B15870019A11D /* DetailVC.swift in Sources */,
+				8A4A22D1254B18830019A11D /* TableVc.swift in Sources */,
+				8A4A22BB254B15870019A11D /* AppDelegate.swift in Sources */,
+				8A4A22BD254B15870019A11D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8A4A22C0254B15870019A11D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A4A22C1254B15870019A11D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8A4A22C5254B15880019A11D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A4A22C6254B15880019A11D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A4A22C9254B15880019A11D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8A4A22CA254B15880019A11D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A4A22CC254B15880019A11D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MV3VW6QSHJ;
+				INFOPLIST_FILE = "Bamboo-TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonnysilva.BambooTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8A4A22CD254B15880019A11D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MV3VW6QSHJ;
+				INFOPLIST_FILE = "Bamboo-TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonnysilva.BambooTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A4A22B2254B15860019A11D /* Build configuration list for PBXProject "BambooTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A4A22C9254B15880019A11D /* Debug */,
+				8A4A22CA254B15880019A11D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A4A22CB254B15880019A11D /* Build configuration list for PBXNativeTarget "BambooTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A4A22CC254B15880019A11D /* Debug */,
+				8A4A22CD254B15880019A11D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A4A22AF254B15860019A11D /* Project object */;
+}
