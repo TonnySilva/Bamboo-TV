@@ -26,6 +26,8 @@ class TableVc: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
+      
+      
       navigationController?.navigationBar.prefersLargeTitles 
 
         // Uncomment the following line to preserve selection between presentations

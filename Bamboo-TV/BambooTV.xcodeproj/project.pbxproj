@@ -15,6 +15,9 @@
 		8A4A22C4254B15880019A11D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A4A22C3254B15880019A11D /* Assets.xcassets */; };
 		8A4A22C7254B15880019A11D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A4A22C5254B15880019A11D /* LaunchScreen.storyboard */; };
 		8A4A22D1254B18830019A11D /* TableVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A22D0254B18830019A11D /* TableVc.swift */; };
+		8A4CFE9025765ACB008AE545 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CFE8F25765ACB008AE545 /* ProfileManager.swift */; };
+		8A59BD51257637310079EDB7 /* SelectUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59BD50257637310079EDB7 /* SelectUsers.swift */; };
+		8A59BD5525763DBB0079EDB7 /* EditarPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59BD5425763DBB0079EDB7 /* EditarPerfil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		8A4A22C6254B15880019A11D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A4A22C8254B15880019A11D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A4A22D0254B18830019A11D /* TableVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVc.swift; sourceTree = "<group>"; };
+		8A4CFE8F25765ACB008AE545 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		8A59BD50257637310079EDB7 /* SelectUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsers.swift; sourceTree = "<group>"; };
+		8A59BD5425763DBB0079EDB7 /* EditarPerfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPerfil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				8A494A6625506B43007CA56F /* Item.swift */,
+				8A4CFE8E25765AAF008AE545 /* Manager */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -69,7 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				8A4A22BA254B15870019A11D /* AppDelegate.swift */,
+				8A59BD5425763DBB0079EDB7 /* EditarPerfil.swift */,
 				8A4A22BC254B15870019A11D /* SceneDelegate.swift */,
+				8A59BD50257637310079EDB7 /* SelectUsers.swift */,
 				8A725F4F2551AC730016487C /* Views */,
 				8A494A6525506AFE007CA56F /* Models */,
 				8A725F4D2551AC1B0016487C /* Controllers */,
@@ -77,6 +86,14 @@
 				8A4A22C8254B15880019A11D /* Info.plist */,
 			);
 			path = "Bamboo-TV";
+			sourceTree = "<group>";
+		};
+		8A4CFE8E25765AAF008AE545 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				8A4CFE8F25765ACB008AE545 /* ProfileManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		8A725F4D2551AC1B0016487C /* Controllers */ = {
@@ -177,9 +194,12 @@
 			files = (
 				8A494A6725506B43007CA56F /* Item.swift in Sources */,
 				8A4A22BF254B15870019A11D /* DetailVC.swift in Sources */,
+				8A59BD51257637310079EDB7 /* SelectUsers.swift in Sources */,
+				8A4CFE9025765ACB008AE545 /* ProfileManager.swift in Sources */,
 				8A4A22D1254B18830019A11D /* TableVc.swift in Sources */,
 				8A4A22BB254B15870019A11D /* AppDelegate.swift in Sources */,
 				8A4A22BD254B15870019A11D /* SceneDelegate.swift in Sources */,
+				8A59BD5525763DBB0079EDB7 /* EditarPerfil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
