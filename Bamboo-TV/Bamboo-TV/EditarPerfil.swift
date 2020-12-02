@@ -11,9 +11,40 @@ import UIKit
 
 class EditarPerfil: UIViewController {
   
+  
+  
+  @IBAction func avatarEdition(_ sender: Any) {
+ 
+    performSegue(withIdentifier: "goToAvatar", sender: nil)
+    
+  }
+  
+  
+  
   @IBAction func cancelButton(_ sender: Any) {
     
-    self.navigationController?.popViewController(animated: true)
+    let alert = UIAlertController(title: "Desea cancelar?", message: nil, preferredStyle: UIAlertController.Style.alert)
+    
+    let action = UIAlertAction(title: "NO", style: UIAlertAction.Style.destructive, handler:
+                                { action in
+                                  
+                                  print("No cancelo")
+                                  
+                                })
+    alert.addAction(action)
+    
+    
+    
+    let cancelAction = UIAlertAction(title: "SI", style: UIAlertAction.Style.cancel, handler:
+                                      {action in
+                                        self.navigationController?.popViewController(animated: true)
+                                        print("Si cancelo")
+                                      })
+    alert.addAction(cancelAction)
+    
+    self.present(alert, animated: true, completion: nil)
+    
+    
   }
   
   

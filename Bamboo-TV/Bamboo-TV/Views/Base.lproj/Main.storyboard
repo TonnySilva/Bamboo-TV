@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GzY-QF-5hF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rtg-XI-YAO">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -41,32 +41,30 @@
             </objects>
             <point key="canvasLocation" x="2381" y="76"/>
         </scene>
-        <!--Mis Items-->
+        <!--BamboO TV-->
         <scene sceneID="xy0-5A-tds">
             <objects>
                 <tableViewController id="aDO-Nk-0BY" customClass="TableVc" customModule="BambooTV" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qyj-gZ-rsf">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="150" estimatedRowHeight="150" sectionHeaderHeight="18" sectionFooterHeight="18" id="qyj-gZ-rsf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="reusableCell" id="uaI-Tc-UtN">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uaI-Tc-UtN" id="svD-8H-Bsi">
-                                    <rect key="frame" x="0.0" y="0.0" width="382.66666666666669" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <connections>
                             <outlet property="dataSource" destination="aDO-Nk-0BY" id="byO-eH-wdl"/>
                             <outlet property="delegate" destination="aDO-Nk-0BY" id="iLx-YV-LJu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Mis Items" id="CA2-8E-vgV"/>
+                    <navigationItem key="navigationItem" title="BamboO TV" id="CA2-8E-vgV">
+                        <barButtonItem key="rightBarButtonItem" title="avatar" style="done" id="bdL-lQ-0Zf">
+                            <connections>
+                                <action selector="avatarItem:" destination="aDO-Nk-0BY" id="aS0-jz-E4x"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="avatarButton" destination="bdL-lQ-0Zf" id="oWO-VD-Zav"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="showDetail" id="a8f-Ae-MTd"/>
+                        <segue destination="GzY-QF-5hF" kind="presentation" identifier="goToProfileSelection" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="2VK-zy-sNY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0oC-vm-fJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -238,6 +236,9 @@
                                 <state key="normal" title="Editar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="editarButton:" destination="JdE-gs-kV0" eventType="touchUpInside" id="gQu-a6-E2v"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -275,6 +276,9 @@
                                         <state key="normal" image="pencil" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="74" scale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="avatarEdition:" destination="bIE-H9-qf0" eventType="touchUpInside" id="hwq-YZ-2i5"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAMBIAR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFk-uq-eNn">
                                         <rect key="frame" x="0.0" y="200" width="170" height="60"/>
@@ -372,7 +376,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="editarLabel" destination="ffH-hv-dEG" id="PK3-F2-zkR"/>
-                        <segue destination="7Wn-iK-0Ui" kind="show" id="DBO-bY-e7O"/>
+                        <segue destination="7Wn-iK-0Ui" kind="show" identifier="goToAvatar" id="DBO-bY-e7O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfk-Zd-uBM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -382,7 +386,7 @@
         <!--Elegir icono-->
         <scene sceneID="rhw-Ha-U5k">
             <objects>
-                <viewController id="7Wn-iK-0Ui" sceneMemberID="viewController">
+                <viewController id="7Wn-iK-0Ui" customClass="SelectAvatar" customModule="BambooTV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pv2-dO-nas">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -444,6 +448,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Elegir icono" id="szp-UU-dy3"/>
+                    <connections>
+                        <outletCollection property="avatarCollection" destination="tGs-87-0bx" collectionClass="NSMutableArray" id="MPW-PF-jUP"/>
+                        <outletCollection property="avatarCollection" destination="dn4-1C-KpJ" collectionClass="NSMutableArray" id="Owz-dz-AzB"/>
+                        <outletCollection property="avatarCollection" destination="RV1-3f-LOW" collectionClass="NSMutableArray" id="12r-d9-FXf"/>
+                        <outletCollection property="avatarCollection" destination="iOn-gL-5ya" collectionClass="NSMutableArray" id="Uj7-72-YPB"/>
+                        <outletCollection property="avatarCollection" destination="uip-LP-soF" collectionClass="NSMutableArray" id="dhC-4C-Ru5"/>
+                        <outletCollection property="avatarCollection" destination="acP-A2-TcG" collectionClass="NSMutableArray" id="G3o-Pl-nlW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4j6-M0-tfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

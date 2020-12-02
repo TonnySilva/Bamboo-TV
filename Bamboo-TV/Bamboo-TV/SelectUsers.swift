@@ -12,31 +12,86 @@ class SelectUsers: UIViewController {
   
   
   private let labelListKey: String = "nameKey"
+//  button editar usuario
+  @IBAction func editarButton(_ sender: Any) {
+    performSegue(withIdentifier: "goToDetail", sender: nil)
+    
+  }
+  
+  
+  
+  
   
   @IBAction func user1Button(_ sender: Any) {
     print("funciona")
-    performSegue(withIdentifier: "goToDetail", sender: nil)
+    
+    
+   let listOfNames: [String]? = UserDefaults.standard.stringArray(forKey: labelListKey)
+    let numOfNames: Int = listOfNames?.count ?? 0
+    
+    if numOfNames > 0 {
+      
+      MoviesViewModel.selectedProfile = listOfNames![0]
+      dismiss(animated: true, completion: nil)
+    } else {
+      performSegue(withIdentifier: "goToDetail", sender: nil)
+    }
   }
+  
+  
+  
   @IBOutlet weak var label1: UILabel!
   
   
   
   @IBAction func user2Button(_ sender: Any) {
+    
+    let listOfNames: [String]? = UserDefaults.standard.stringArray(forKey: labelListKey)
+     let numOfNames: Int = listOfNames?.count ?? 0
+    
+    if numOfNames > 1 {
+      MoviesViewModel.selectedProfile = listOfNames![1]
+      dismiss(animated: true, completion: nil)
+    } else {
+    
     performSegue(withIdentifier: "goToDetail", sender: nil)
+  }
   }
   
   @IBOutlet weak var label2: UILabel!
   
   
   @IBAction func user3Button(_ sender: Any) {
+    
+    let listOfNames: [String]? = UserDefaults.standard.stringArray(forKey: labelListKey)
+     let numOfNames: Int = listOfNames?.count ?? 0
+    
+    if numOfNames > 2 {
+      print("\(listOfNames![2])")
+      MoviesViewModel.selectedProfile = listOfNames![2]
+      dismiss(animated: true, completion: nil)
+    } else {
     performSegue(withIdentifier: "goToDetail", sender: nil)
+  }
+    
+    
   }
   
   @IBOutlet weak var label3: UILabel!
   
   
   @IBAction func user4Button(_ sender: Any) {
+    
+    let listOfNames: [String]? = UserDefaults.standard.stringArray(forKey: labelListKey)
+     let numOfNames: Int = listOfNames?.count ?? 0
+    
+    if numOfNames > 3 {
+      MoviesViewModel.selectedProfile = listOfNames![3]
+      dismiss(animated: true, completion: nil)
+    } else {
     performSegue(withIdentifier: "goToDetail", sender: nil)
+  }
+    
   }
   
   @IBOutlet weak var label4: UILabel!
