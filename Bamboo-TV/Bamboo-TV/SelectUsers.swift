@@ -10,9 +10,9 @@ import UIKit
 
 class SelectUsers: UIViewController {
   
-  
-  private let labelListKey: String = "nameKey"
-//  button editar usuario
+  private let profileManager: ProfileManager = ProfileManager()
+  //  private let labelListKey: String = "nameKey"
+  //  button editar usuario
   @IBAction func editarButton(_ sender: Any) {
     performSegue(withIdentifier: "goToDetail", sender: nil)
     
@@ -26,12 +26,12 @@ class SelectUsers: UIViewController {
     print("funciona")
     
     
-   let listOfNames: [String]? = UserDefaults.standard.stringArray(forKey: labelListKey)
-    let numOfNames: Int = listOfNames?.count ?? 0
+    let listOfNames: [String] = profileManager.readProfiles()
+    let numOfNames: Int = listOfNames.count
     
     if numOfNames > 0 {
       
-      MoviesViewModel.selectedProfile = listOfNames![0]
+      MoviesViewModel.selectedProfile = listOfNames[0]
       dismiss(animated: true, completion: nil)
     } else {
       performSegue(withIdentifier: "goToDetail", sender: nil)
@@ -46,16 +46,16 @@ class SelectUsers: UIViewController {
   
   @IBAction func user2Button(_ sender: Any) {
     
-    let listOfNames: [String]? = UserDefaults.standard.stringArray(forKey: labelListKey)
-     let numOfNames: Int = listOfNames?.count ?? 0
+    let listOfNames: [String] = profileManager.readProfiles()
+    let numOfNames: Int = listOfNames.count
     
     if numOfNames > 1 {
-      MoviesViewModel.selectedProfile = listOfNames![1]
+      MoviesViewModel.selectedProfile = listOfNames[1]
       dismiss(animated: true, completion: nil)
     } else {
-    
-    performSegue(withIdentifier: "goToDetail", sender: nil)
-  }
+      
+      performSegue(withIdentifier: "goToDetail", sender: nil)
+    }
   }
   
   @IBOutlet weak var label2: UILabel!
@@ -63,16 +63,16 @@ class SelectUsers: UIViewController {
   
   @IBAction func user3Button(_ sender: Any) {
     
-    let listOfNames: [String]? = UserDefaults.standard.stringArray(forKey: labelListKey)
-     let numOfNames: Int = listOfNames?.count ?? 0
+    let listOfNames: [String] = profileManager.readProfiles()
+    let numOfNames: Int = listOfNames.count
     
     if numOfNames > 2 {
-      print("\(listOfNames![2])")
-      MoviesViewModel.selectedProfile = listOfNames![2]
+      print("\(listOfNames[2])")
+      MoviesViewModel.selectedProfile = listOfNames[2]
       dismiss(animated: true, completion: nil)
     } else {
-    performSegue(withIdentifier: "goToDetail", sender: nil)
-  }
+      performSegue(withIdentifier: "goToDetail", sender: nil)
+    }
     
     
   }
@@ -82,37 +82,37 @@ class SelectUsers: UIViewController {
   
   @IBAction func user4Button(_ sender: Any) {
     
-    let listOfNames: [String]? = UserDefaults.standard.stringArray(forKey: labelListKey)
-     let numOfNames: Int = listOfNames?.count ?? 0
+    let listOfNames: [String] = profileManager.readProfiles()
+    let numOfNames: Int = listOfNames.count
     
     if numOfNames > 3 {
-      MoviesViewModel.selectedProfile = listOfNames![3]
+      MoviesViewModel.selectedProfile = listOfNames[3]
       dismiss(animated: true, completion: nil)
     } else {
-    performSegue(withIdentifier: "goToDetail", sender: nil)
-  }
+      performSegue(withIdentifier: "goToDetail", sender: nil)
+    }
     
   }
   
   @IBOutlet weak var label4: UILabel!
   
-
+  
   
   override func viewWillAppear(_ animated: Bool) {
-    if let listOfNames: [String] = UserDefaults.standard.stringArray(forKey: labelListKey) {
-      for (index, name) in listOfNames.enumerated() {
-        if index == 0 {
-          label1.text = name
-        } else if index == 1 {
-          label2.text = name
-        } else if index == 2 {
-          label3.text = name
-        } else if index == 3 {
-          label4.text = name
-        }
+    
+    for (index, name) in profileManager.readProfiles().enumerated() {
+      if index == 0 {
+        label1.text = name
+      } else if index == 1 {
+        label2.text = name
+      } else if index == 2 {
+        label3.text = name
+      } else if index == 3 {
+        label4.text = name
       }
     }
   }
+  
   
   
   

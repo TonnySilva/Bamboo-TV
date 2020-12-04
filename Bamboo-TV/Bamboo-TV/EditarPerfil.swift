@@ -11,6 +11,8 @@ import UIKit
 
 class EditarPerfil: UIViewController {
   
+  private let profileManager: ProfileManager = ProfileManager()
+
   
   
   @IBAction func avatarEdition(_ sender: Any) {
@@ -51,7 +53,7 @@ class EditarPerfil: UIViewController {
   
   @IBOutlet weak var editarLabel: UITextField!
   
-  private let labelListKey: String = "nameKey"
+//  private let labelListKey: String = "nameKey"
   
   
   
@@ -63,7 +65,7 @@ class EditarPerfil: UIViewController {
     
     let action = UIAlertAction(title: "Eliminar", style: UIAlertAction.Style.destructive, handler:
                                 { action in
-                                  UserDefaults.standard.removeObject(forKey: self.labelListKey)
+//                                  self.profileManager.removeProfiles()
                                   self.navigationController?.popViewController(animated: true)
                                   UserDefaults.standard.synchronize()
                                   print("Elimino datos")
@@ -90,16 +92,18 @@ class EditarPerfil: UIViewController {
     
     guard let nameUserNew: String = editarLabel.text else { return }
     
-    let fullString: String = nameUserNew
+  
+    profileManager.saveProfiles(nameUserNew)
     
     
-    var listOfNames: [String] = UserDefaults.standard.stringArray(forKey: labelListKey) ?? [String]()
-    
-    listOfNames.append(fullString)
-    
-    UserDefaults.standard.set(listOfNames, forKey: labelListKey)
-    
-    UserDefaults.standard.synchronize()
+   
+//    var listOfNames: [String] = UserDefaults.standard.stringArray(forKey: labelListKey) ?? [String]()
+//
+//    listOfNames.append(fullString)
+//
+//    UserDefaults.standard.set(listOfNames, forKey: labelListKey)
+//
+//    UserDefaults.standard.synchronize()
     
     self.navigationController?.popViewController(animated: true)
   }

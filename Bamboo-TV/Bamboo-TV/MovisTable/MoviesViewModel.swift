@@ -12,7 +12,4 @@ struct MoviesViewModel {
   
   static var selectedProfile: String?
   
- 
-  
-  
 }
