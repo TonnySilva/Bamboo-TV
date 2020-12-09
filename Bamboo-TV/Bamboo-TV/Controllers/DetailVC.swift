@@ -22,7 +22,7 @@ class DetailVC: UIViewController {
   }
 
   override func viewWillAppear(_ animated: Bool) {
-    descriptionLabel.text = descriptionText
+//    descriptionLabel.text = descriptionText
     
     
     

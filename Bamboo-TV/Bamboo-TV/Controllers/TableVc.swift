@@ -9,6 +9,9 @@ import UIKit
 import Alamofire
 
 
+
+
+
 class TableVc: UITableViewController {
   
   //  crear instancia de moviesManager
@@ -16,7 +19,8 @@ class TableVc: UITableViewController {
   var movie: [Movie]?
   
   
-  private let namesSeccions = ["Populares", "Recientes", "Más votados", "Películas que te gustarán", "Cine internacional"]
+//  private let namesSeccions = ["Populares", "Recientes", "Más votados", "Películas que te gustarán", "Cine internacional"]
+  
   
   
   private let reuseIdentifier = String(describing: TableViewCell.self)
@@ -30,20 +34,22 @@ class TableVc: UITableViewController {
     
     super.viewDidLoad()
     fetchMovies()
-//    fetchMoviesDetail()
+    //    fetchMoviesDetail()
   }
   
   private func fetchMovies() {
     moviesManager.fetchMovies() { movieList in
+      self.movie = movieList.results
+      self.tableView.reloadData()
       
-      for movie in movieList.results {
-        self.moviesManager.fetchMovieDetail(movieId: String(movie.id)) {details in
-          print("==>\(details.title)")
+//      for movie in movieList.results {
+//        self.moviesManager.fetchMovieDetail(movieId: String(movie.id)) {details in
+//          print("==>\(details.title)")
         }
       }
       
-    }
-  }
+    
+  
   
   
   private func fetchMoviesDetail() {
@@ -76,11 +82,9 @@ class TableVc: UITableViewController {
     if profileSelectionScreenNeeded {
       
       goToProfileSelection()
-      
       profileSelectionScreenNeeded = false
       
     }
-    
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -94,24 +98,6 @@ class TableVc: UITableViewController {
   }
   
   
-  
-  
-  
-  // Antiguo
-  //  var currentDescription: String = ""
-  //
-  //
-  //  let items: [Item] = [Item(name: "Item cero", description: "Descripcion item cero"),
-  //                       Item(name: "Item uno", description: "Descripcion item uno"),
-  //                       Item(name: "Item dos", description: "Descripcion item dos"),
-  //                       Item(name: "Item tres", description: "Descripcion item tres")]
-  //
-  //
-  //
-  //
-  //
-  ////  let items: [String] = ["Item cero", "Item uno", "Item dos", "Item tres"]
-  //
   //    override func viewDidLoad() {
   //        super.viewDidLoad()
   //
@@ -138,7 +124,7 @@ class TableVc: UITableViewController {
   //
   override func numberOfSections(in tableView: UITableView) -> Int {
     
-    return namesSeccions.count
+    return SectionType.allCases.count
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -150,8 +136,15 @@ class TableVc: UITableViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-    //      cell.textLabel?.text = exercisesList[indexPath.row]
-    //      cell.detailTextLabel?.text = "detailtext"
+    
+    if let moviesCell = cell as? TableViewCell,
+       let section: SectionType = SectionType(rawValue: indexPath.section) {
+      moviesCell.rowHeight = section.rowHeight
+      moviesCell.circularCells = section.isCircular
+      moviesCell.movies = moviesForSection(indexPath.section)
+      moviesCell.delegate = self
+      
+    }
     
     
     return cell
@@ -159,26 +152,35 @@ class TableVc: UITableViewController {
   
   override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     
-    return namesSeccions[section]
+    guard let sectionType: SectionType = SectionType(rawValue: section) else { return "" }
+    
+    return sectionType.name
   }
   
-  //  override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-  //
-  //    let myLabel = UILabel()a
-  //     myLabel.frame = CGRect(x: 20, y: 8, width: 320, height: 20)
-  //     myLabel.font = UIFont.boldSystemFont(ofSize: 18)
-  //     myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
-  //
-  //     let headerView = UIView()
-  //     headerView.addSubview(myLabel)
-  //
-  //     return headerView
-  // }
   
-  //  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-  //
-  //    return
-  //  }
+  
+  
+  private func moviesForSection(_ section: Int) -> [Movie] {
+    guard let allMovies = self.movie ,
+          let sectionType: SectionType = SectionType(rawValue: section) else { return [] }
+//    switch sectionType {
+//    case .mostPopular:
+//      return allMovies.sorted { $0 }
+//    default:
+//      <#code#>
+//    }
+    return allMovies
+  }
+  
+  
+  
+  
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    guard let section: SectionType = SectionType(rawValue: indexPath.section) else {
+      return 100
+    }
+    return section.rowHeight
+  }
   
   //  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
   //    let cell = tableView.dequeueReusableCell(withIdentifier: "reusableCell", for: indexPath)
@@ -239,4 +241,93 @@ class TableVc: UITableViewController {
   //        // Get the new view controller using segue.destination.
   //        // Pass the selected object to the new view controller.
   //    }
+  
+  
+}
+
+
+// MARK: - Info for sections
+
+extension TableVc {
+  
+  enum SectionType: Int, CaseIterable {
+    
+    case mostPopular, recentlyAdded, mostVoted, discover, internationalMovies
+    
+    
+    
+    var name: String {
+      
+      switch self {
+      case .mostPopular:
+        
+        return "Populares"
+        
+      case .recentlyAdded:
+        
+        return "Recientes"
+        
+      case .mostVoted:
+        
+        return "Más votados"
+        
+      case .discover:
+        
+        return "Películas que te gustarán"
+        
+      case .internationalMovies:
+        
+        return "Cine internacional"
+        
+      }
+      
+    }
+    
+    
+    
+    var rowHeight: CGFloat {
+      
+      switch self {
+      
+      case .mostPopular:
+        
+        return 300.0
+        
+      default:
+        
+        return 150.0
+        
+      }
+      
+    }
+    
+    
+    
+    var isCircular: Bool {
+      
+      switch self {
+      
+      case .mostVoted:
+        
+        return true
+        
+      default:
+        
+        return false
+        
+      }
+      
+    }
+    
+  }
+  
+}
+
+extension TableVc: TableVcDelegate {
+  func didSelectMovie(movieId: Int) {
+    print("didSelectMovie with movieId: \(movieId)")
+//    MoviesViewModel
+//showDetailViewController()
+    
+  }
 }

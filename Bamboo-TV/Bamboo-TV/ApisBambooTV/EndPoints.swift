@@ -12,6 +12,7 @@ enum EndPoints: String {
   
   case movieDiscover = "https://api.themoviedb.org/3/discover/movie"
   case movieDetails = "https://api.themoviedb.org/3/movie"
+  case movieCoverImage = "https://image.tmdb.org/t/p/w500"
   
   
   var url: String {
