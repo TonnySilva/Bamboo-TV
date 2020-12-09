@@ -38,13 +38,13 @@ struct MoviesManager {
     
   }
   
-  func fetchMovieDetail(movieId: String,
+  func fetchMovieDetail(movieId: Int,
                                  success: @escaping (MovieDetail) -> ()) {
     
     let parametres: [String : String] = [
       EndPointsParameters.apiKey.rawValue: apiKeyValue ]
     
-    let fullUrl = EndPoints.movieDetails.url + "/" + movieId
+    let fullUrl = EndPoints.movieDetails.url + "/" + String(movieId)
     AF.request(fullUrl, parameters: parametres).validate().responseDecodable(of: MovieDetail.self) { (response) in
       
       guard let movieDetails: MovieDetail = response.value else {

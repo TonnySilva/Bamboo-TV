@@ -21,42 +21,42 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d8j-Iy-HNk">
                                 <rect key="frame" x="0.0" y="0.0" width="1058" height="224"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSb-t6-vYF">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSb-t6-vYF">
                                         <rect key="frame" x="0.0" y="0.0" width="168" height="224"/>
                                         <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="buttonTouched:" destination="2Bd-0z-TJ1" eventType="touchUpInside" id="eqN-s8-FOw"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGI-cp-qf1">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGI-cp-qf1">
                                         <rect key="frame" x="178" y="0.0" width="168" height="224"/>
                                         <color key="backgroundColor" red="0.82925841970000003" green="0.82925841970000003" blue="0.82925841970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <action selector="buttonTouched:" destination="2Bd-0z-TJ1" eventType="touchUpInside" id="lb2-k2-y2t"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfN-xW-VLS">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfN-xW-VLS">
                                         <rect key="frame" x="356" y="0.0" width="168" height="224"/>
                                         <color key="backgroundColor" red="1" green="0.116620448" blue="0.14259425680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <action selector="buttonTouched:" destination="2Bd-0z-TJ1" eventType="touchUpInside" id="feR-GT-iQD"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gec-Iz-GOZ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gec-Iz-GOZ">
                                         <rect key="frame" x="534" y="0.0" width="168" height="224"/>
                                         <color key="backgroundColor" red="0.78527768779999996" green="0.55640857210000005" blue="0.1511845205" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <action selector="buttonTouched:" destination="2Bd-0z-TJ1" eventType="touchUpInside" id="8gX-gC-5AT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQA-Q8-BcE">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQA-Q8-BcE">
                                         <rect key="frame" x="712" y="0.0" width="168" height="224"/>
                                         <color key="backgroundColor" red="0.27636483519999999" green="1" blue="0.57638975660000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <action selector="buttonTouched:" destination="2Bd-0z-TJ1" eventType="touchUpInside" id="pmY-r5-JoX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxu-4g-3ff">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxu-4g-3ff">
                                         <rect key="frame" x="890" y="0.0" width="168" height="224"/>
                                         <color key="backgroundColor" red="0.5390671306" green="1" blue="0.85592998539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>

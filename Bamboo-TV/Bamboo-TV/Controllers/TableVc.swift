@@ -53,10 +53,14 @@ class TableVc: UITableViewController {
   
   
   private func fetchMoviesDetail() {
-    moviesManager.fetchMovieDetail(movieId: "550") { movieDetails in
+//    moviesManager.fetchMovieDetail(movieId: "550") { movieDetails in
+//      print("Details!!! \(movieDetails)")
+      guard let selectedMovieId = MoviesViewModel.selectedMovieId else { return }
+    moviesManager.fetchMovieDetail(movieId: selectedMovieId) { movieDetails in
       print("Details!!! \(movieDetails)")
     }
-  }
+    }
+  
   
   
   
@@ -73,6 +77,10 @@ class TableVc: UITableViewController {
   
   private func goToProfileSelection() {
     performSegue(withIdentifier: "goToProfileSelection", sender: self)
+  }
+  
+  private func showDetail() {
+    performSegue(withIdentifier: "showDetail", sender: self)
   }
   
   private var profileSelectionScreenNeeded: Bool = true
@@ -163,14 +171,26 @@ class TableVc: UITableViewController {
   private func moviesForSection(_ section: Int) -> [Movie] {
     guard let allMovies = self.movie ,
           let sectionType: SectionType = SectionType(rawValue: section) else { return [] }
-//    switch sectionType {
-//    case .mostPopular:
-//      return allMovies.sorted { $0 }
-//    default:
-//      <#code#>
-//    }
-    return allMovies
-  }
+    
+    switch sectionType {
+
+           case .mostPopular:
+               return allMovies.sorted{ $0.popularity > $1.popularity }
+
+           case .recentlyAdded:
+               return allMovies.sorted{ $0.releaseDate > $1.releaseDate }
+
+           case .mostVoted:
+               return allMovies.sorted{ $0.voteAverage > $1.voteAverage }
+
+           case .discover:
+               return allMovies.shuffled()
+
+           case .internationalMovies:
+               return allMovies.filter{ $0.originalLanguage != "en" }
+
+           }
+       }
   
   
   
@@ -260,27 +280,21 @@ extension TableVc {
       
       switch self {
       case .mostPopular:
-        
         return "Populares"
         
       case .recentlyAdded:
-        
         return "Recientes"
         
       case .mostVoted:
-        
         return "Más votados"
         
       case .discover:
-        
         return "Películas que te gustarán"
         
       case .internationalMovies:
-        
         return "Cine internacional"
         
       }
-      
     }
     
     
@@ -288,17 +302,13 @@ extension TableVc {
     var rowHeight: CGFloat {
       
       switch self {
-      
       case .mostPopular:
-        
         return 300.0
         
       default:
-        
         return 150.0
         
       }
-      
     }
     
     
@@ -308,11 +318,9 @@ extension TableVc {
       switch self {
       
       case .mostVoted:
-        
         return true
         
       default:
-        
         return false
         
       }
@@ -327,7 +335,7 @@ extension TableVc: TableVcDelegate {
   func didSelectMovie(movieId: Int) {
     print("didSelectMovie with movieId: \(movieId)")
 //    MoviesViewModel
-//showDetailViewController()
+ showDetail()
     
   }
 }
