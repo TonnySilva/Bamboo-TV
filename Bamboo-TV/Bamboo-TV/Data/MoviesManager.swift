@@ -70,4 +70,5 @@ struct MoviesManager {
           debugPrint("Error: \(String(describing: response.error))")
 
       }
+
 }

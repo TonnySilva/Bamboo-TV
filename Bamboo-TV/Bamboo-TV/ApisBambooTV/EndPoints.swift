@@ -15,6 +15,7 @@ enum EndPoints: String {
   case movieCoverImage = "https://image.tmdb.org/t/p/w500"
   
   
+  
   var url: String {
     return self.rawValue }
 }

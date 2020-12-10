@@ -130,7 +130,6 @@
 				8A859ED02577DC1700360B51 /* xibCell */,
 				8A859ECB2577A98B00360B51 /* MovisTable */,
 				8A725F4F2551AC730016487C /* Views */,
-				8A494A6525506AFE007CA56F /* Models */,
 				8A725F4D2551AC1B0016487C /* Controllers */,
 				8A725F502551ACAA0016487C /* Suport */,
 				8A4A22C8254B15880019A11D /* Info.plist */,
@@ -202,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				8A4A22C0254B15870019A11D /* Main.storyboard */,
+				8A494A6525506AFE007CA56F /* Models */,
 			);
 			path = Views;
 			sourceTree = "<group>";

@@ -19,7 +19,7 @@ class TableVc: UITableViewController {
   var movie: [Movie]?
   
   
-//  private let namesSeccions = ["Populares", "Recientes", "Más votados", "Películas que te gustarán", "Cine internacional"]
+  //  private let namesSeccions = ["Populares", "Recientes", "Más votados", "Películas que te gustarán", "Cine internacional"]
   
   
   
@@ -42,24 +42,24 @@ class TableVc: UITableViewController {
       self.movie = movieList.results
       self.tableView.reloadData()
       
-//      for movie in movieList.results {
-//        self.moviesManager.fetchMovieDetail(movieId: String(movie.id)) {details in
-//          print("==>\(details.title)")
-        }
-      }
-      
-    
+      //      for movie in movieList.results {
+      //        self.moviesManager.fetchMovieDetail(movieId: String(movie.id)) {details in
+      //          print("==>\(details.title)")
+    }
+  }
+  
+  
   
   
   
   private func fetchMoviesDetail() {
-//    moviesManager.fetchMovieDetail(movieId: "550") { movieDetails in
-//      print("Details!!! \(movieDetails)")
-      guard let selectedMovieId = MoviesViewModel.selectedMovieId else { return }
+    //    moviesManager.fetchMovieDetail(movieId: "550") { movieDetails in
+    //      print("Details!!! \(movieDetails)")
+    guard let selectedMovieId = MoviesViewModel.selectedMovieId else { return }
     moviesManager.fetchMovieDetail(movieId: selectedMovieId) { movieDetails in
       print("Details!!! \(movieDetails)")
     }
-    }
+  }
   
   
   
@@ -173,24 +173,24 @@ class TableVc: UITableViewController {
           let sectionType: SectionType = SectionType(rawValue: section) else { return [] }
     
     switch sectionType {
-
-           case .mostPopular:
-               return allMovies.sorted{ $0.popularity > $1.popularity }
-
-           case .recentlyAdded:
-               return allMovies.sorted{ $0.releaseDate > $1.releaseDate }
-
-           case .mostVoted:
-               return allMovies.sorted{ $0.voteAverage > $1.voteAverage }
-
-           case .discover:
-               return allMovies.shuffled()
-
-           case .internationalMovies:
-               return allMovies.filter{ $0.originalLanguage != "en" }
-
-           }
-       }
+    
+    case .mostPopular:
+      return allMovies.sorted{ $0.popularity > $1.popularity }
+      
+    case .recentlyAdded:
+      return allMovies.sorted{ $0.releaseDate > $1.releaseDate }
+      
+    case .mostVoted:
+      return allMovies.sorted{ $0.voteAverage > $1.voteAverage }
+      
+    case .discover:
+      return allMovies.shuffled()
+      
+    case .internationalMovies:
+      return allMovies.filter{ $0.originalLanguage != "en" }
+      
+    }
+  }
   
   
   
@@ -334,8 +334,8 @@ extension TableVc {
 extension TableVc: TableVcDelegate {
   func didSelectMovie(movieId: Int) {
     print("didSelectMovie with movieId: \(movieId)")
-//    MoviesViewModel
- showDetail()
+    MoviesViewModel.selectedMovieId = movieId
+    showDetail()
     
   }
 }
