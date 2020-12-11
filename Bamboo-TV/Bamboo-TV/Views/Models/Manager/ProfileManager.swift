@@ -2,52 +2,46 @@
 //  ProfileManager.swift
 //  BambooTV
 //
-//  Created by erick silva teran on 01/12/2020.
+//  Created by Francesc Navarro on 27/11/2020.
+//  Copyright © 2020 Bamboo Academy. All rights reserved.
 //
 
 import Foundation
 
-
 struct ProfileManager {
-  
-  private let labelListKey: String = "nameKey"
-  
-  
-  func readProfiles() -> [String] {
-    let listOfNames: [String]? = UserDefaults.standard.stringArray(forKey: labelListKey)
-    return listOfNames ?? [String]()
-  }
-  
-  
-  func saveProfiles(_ userName: String) {
-    
-    var listOfNames: [String] = UserDefaults.standard.stringArray(forKey: labelListKey) ?? [String]()
-    
-    
-    listOfNames.append(userName)
-    
-    UserDefaults.standard.set(listOfNames, forKey: labelListKey)
-    
-    UserDefaults.standard.synchronize()
-  }
-  
-  func removeProfiles(_ userName: String) {
-    
-    var listOfNames: [String] = UserDefaults.standard.stringArray(forKey: labelListKey) ?? [String]()
-    
-// el siguiente metodo elimina el usuario
-//    listOfNames.removeAll(where: { $0 == userName })
-    
-//    el siguiente metodo elimina el primer string seleccionado unicamente , aunque hayan mas strings con el mismo nombre.
-    if let index = listOfNames.firstIndex(where: { $0 == userName }) {
-      listOfNames.remove(at: index)
+    func readProfiles() -> [Profile] {
+        if let encodedData = UserDefaults.standard.data(forKey: ProfileKeys.profileList.rawValue) {
+            do {
+                let storedProfiles = try JSONDecoder().decode([Profile].self, from: encodedData)
+                return storedProfiles
+
+            } catch {
+                print("Unable to decode [Profiles] (\(error))")
+            }
+        }
+        return []
     }
     
-    UserDefaults.standard.set(listOfNames, forKey: labelListKey)
-    UserDefaults.standard.synchronize()
+    func saveProfile(_ profile: Profile) {
+        removeProfile(profile)
+        var storedProfiles = readProfiles()
+        storedProfiles.append(profile)
+        saveAllProfiles(storedProfiles)
+    }
     
-  }
-  
-  
+    func removeProfile(_ profile: Profile) {
+        var storedProfiles = readProfiles()
+        storedProfiles.removeAll(where: { $0 == profile })
+        saveAllProfiles(storedProfiles)
+    }
+    
+    private func saveAllProfiles(_ profiles: [Profile]) {
+        guard let encodedData = try? JSONEncoder().encode(profiles) else { return }
+        UserDefaults.standard.set(encodedData, forKey: ProfileKeys.profileList.rawValue)
+        UserDefaults.standard.synchronize()
+    }
 }
 
+enum ProfileKeys: String {
+    case profileList
+}

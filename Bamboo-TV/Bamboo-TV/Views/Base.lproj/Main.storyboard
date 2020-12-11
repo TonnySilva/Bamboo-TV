@@ -531,6 +531,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="avatarEditionOutlet" destination="tQ2-g4-1ZK" id="gS8-aG-0OZ"/>
                         <outlet property="editarLabel" destination="ffH-hv-dEG" id="PK3-F2-zkR"/>
                         <segue destination="7Wn-iK-0Ui" kind="show" identifier="goToAvatar" id="DBO-bY-e7O"/>
                     </connections>
@@ -556,10 +557,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGs-87-0bx">
                                                 <rect key="frame" x="0.0" y="0.0" width="135" height="93.333333333333329"/>
                                                 <state key="normal" title="Button" image="avatar_01"/>
+                                                <connections>
+                                                    <action selector="avatarButtonTouched:" destination="7Wn-iK-0Ui" eventType="touchUpInside" id="OM7-5z-ncr"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dn4-1C-KpJ">
                                                 <rect key="frame" x="165" y="0.0" width="135" height="93.333333333333329"/>
                                                 <state key="normal" title="Button" image="avatar_02"/>
+                                                <connections>
+                                                    <action selector="avatarButtonTouched:" destination="7Wn-iK-0Ui" eventType="touchUpInside" id="8HJ-5D-cti"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -569,10 +576,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RV1-3f-LOW">
                                                 <rect key="frame" x="0.0" y="0.0" width="135" height="93.333333333333329"/>
                                                 <state key="normal" title="Button" image="avatar_41"/>
+                                                <connections>
+                                                    <action selector="avatarButtonTouched:" destination="7Wn-iK-0Ui" eventType="touchUpInside" id="oOM-6l-lWk"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOn-gL-5ya">
                                                 <rect key="frame" x="165" y="0.0" width="135" height="93.333333333333329"/>
                                                 <state key="normal" title="Button" image="avatar_27"/>
+                                                <connections>
+                                                    <action selector="avatarButtonTouched:" destination="7Wn-iK-0Ui" eventType="touchUpInside" id="70H-Xj-U3B"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -582,10 +595,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uip-LP-soF">
                                                 <rect key="frame" x="0.0" y="0.0" width="135" height="93.333333333333329"/>
                                                 <state key="normal" title="Button" image="avatar_16"/>
+                                                <connections>
+                                                    <action selector="avatarButtonTouched:" destination="7Wn-iK-0Ui" eventType="touchUpInside" id="F8d-Tg-RG0"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acP-A2-TcG">
                                                 <rect key="frame" x="165" y="0.0" width="135" height="93.333333333333329"/>
                                                 <state key="normal" title="Button" image="avatar_31"/>
+                                                <connections>
+                                                    <action selector="avatarButtonTouched:" destination="7Wn-iK-0Ui" eventType="touchUpInside" id="rc1-tc-kyF"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

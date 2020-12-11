@@ -15,7 +15,14 @@ class EditarPerfil: UIViewController {
 
   
   
+  
+  @IBOutlet weak var avatarEditionOutlet: UIButton!
+  
+  
   @IBAction func avatarEdition(_ sender: Any) {
+    
+    
+    
  
     performSegue(withIdentifier: "goToAvatar", sender: nil)
     
@@ -92,8 +99,9 @@ class EditarPerfil: UIViewController {
     
     guard let nameUserNew: String = editarLabel.text else { return }
     
+    let profile: Profile = Profile(name: nameUserNew, imageName: "avatar_01", id: 0)
   
-    profileManager.saveProfiles(nameUserNew)
+    profileManager.saveProfile(profile)
     
     
    
@@ -109,6 +117,12 @@ class EditarPerfil: UIViewController {
   }
   
   
-  
+  override func viewWillAppear(_ animated: Bool) {
+    if let imageName = MoviesViewModel.newAvatarImageName {
+      avatarEditionOutlet.setImage(UIImage(named: imageName), for: .normal)
+    }
+    
+    
+  }
   
 }

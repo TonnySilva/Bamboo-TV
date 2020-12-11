@@ -15,10 +15,11 @@
 		8A4A22C4254B15880019A11D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A4A22C3254B15880019A11D /* Assets.xcassets */; };
 		8A4A22C7254B15880019A11D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A4A22C5254B15880019A11D /* LaunchScreen.storyboard */; };
 		8A4A22D1254B18830019A11D /* TableVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A22D0254B18830019A11D /* TableVc.swift */; };
-		8A4CFE9025765ACB008AE545 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CFE8F25765ACB008AE545 /* ProfileManager.swift */; };
+		8A4CFE9025765ACB008AE545 /* ProfileManager_String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CFE8F25765ACB008AE545 /* ProfileManager_String.swift */; };
 		8A4DECE1257A30C000E203C6 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4DECE0257A30C000E203C6 /* MovieList.swift */; };
 		8A4DECE4257A349D00E203C6 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4DECE3257A349D00E203C6 /* Movie.swift */; };
 		8A4DECE7257A391900E203C6 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4DECE6257A391900E203C6 /* MovieDetail.swift */; };
+		8A4DED45258378B90025EA28 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4DED44258378B90025EA28 /* ProfileManager.swift */; };
 		8A4F0A082578EBCE00514A45 /* BarButtonsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4F0A072578EBCE00514A45 /* BarButtonsExtension.swift */; };
 		8A5802F3257A4CAD00050D2F /* MoviesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5802F2257A4CAD00050D2F /* MoviesManager.swift */; };
 		8A59BD51257637310079EDB7 /* SelectUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59BD50257637310079EDB7 /* SelectUsers.swift */; };
@@ -43,10 +44,11 @@
 		8A4A22C6254B15880019A11D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A4A22C8254B15880019A11D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A4A22D0254B18830019A11D /* TableVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVc.swift; sourceTree = "<group>"; };
-		8A4CFE8F25765ACB008AE545 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		8A4CFE8F25765ACB008AE545 /* ProfileManager_String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager_String.swift; sourceTree = "<group>"; };
 		8A4DECE0257A30C000E203C6 /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
 		8A4DECE3257A349D00E203C6 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		8A4DECE6257A391900E203C6 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
+		8A4DED44258378B90025EA28 /* ProfileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		8A4F0A072578EBCE00514A45 /* BarButtonsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonsExtension.swift; sourceTree = "<group>"; };
 		8A5802F2257A4CAD00050D2F /* MoviesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesManager.swift; sourceTree = "<group>"; };
 		8A59BD50257637310079EDB7 /* SelectUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsers.swift; sourceTree = "<group>"; };
@@ -139,7 +141,8 @@
 		8A4CFE8E25765AAF008AE545 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				8A4CFE8F25765ACB008AE545 /* ProfileManager.swift */,
+				8A4DED44258378B90025EA28 /* ProfileManager.swift */,
+				8A4CFE8F25765ACB008AE545 /* ProfileManager_String.swift */,
 				8A494A6625506B43007CA56F /* Profile.swift */,
 			);
 			path = Manager;
@@ -358,10 +361,11 @@
 				8A494A6725506B43007CA56F /* Profile.swift in Sources */,
 				8A4A22BF254B15870019A11D /* DetailVC.swift in Sources */,
 				8A59BD51257637310079EDB7 /* SelectUsers.swift in Sources */,
-				8A4CFE9025765ACB008AE545 /* ProfileManager.swift in Sources */,
+				8A4CFE9025765ACB008AE545 /* ProfileManager_String.swift in Sources */,
 				8A4A22D1254B18830019A11D /* TableVc.swift in Sources */,
 				8A4A22BB254B15870019A11D /* AppDelegate.swift in Sources */,
 				8A4DECE1257A30C000E203C6 /* MovieList.swift in Sources */,
+				8A4DED45258378B90025EA28 /* ProfileManager.swift in Sources */,
 				8A859ED32577DC7500360B51 /* TableViewCell.swift in Sources */,
 				8A4F0A082578EBCE00514A45 /* BarButtonsExtension.swift in Sources */,
 				8A5802F3257A4CAD00050D2F /* MoviesManager.swift in Sources */,

@@ -10,6 +10,14 @@ import Foundation
 
 struct MoviesViewModel {
   
-  static var selectedProfile: String?
+  static var selectedProfile: Profile?
   static var selectedMovieId: Int?
+  static var newAvatarImageName: String?
+  
+  static func resetSelection() {
+    selectedProfile = nil
+    selectedMovieId = nil
+    newAvatarImageName = nil
+    
+  }
 }

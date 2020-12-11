@@ -15,9 +15,11 @@ struct Profile: Equatable, Codable {
     var id: Int
     var image: UIImage? {
         return UIImage(named: imageName)
+      
     }
     
     static func == (lhs: Self, rhs: Self) -> Bool {
-        return lhs.id == rhs.id
+//        return lhs.id == rhs.id
+      return lhs.name == rhs.name && lhs.imageName == rhs.imageName
     }
 }

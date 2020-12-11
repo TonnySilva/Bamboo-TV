@@ -26,7 +26,7 @@ class SelectUsers: UIViewController {
     print("funciona")
     
     
-    let listOfNames: [String] = profileManager.readProfiles()
+    let listOfNames: [Profile] = profileManager.readProfiles()
     let numOfNames: Int = listOfNames.count
     
     if numOfNames > 0 {
@@ -46,7 +46,7 @@ class SelectUsers: UIViewController {
   
   @IBAction func user2Button(_ sender: Any) {
     
-    let listOfNames: [String] = profileManager.readProfiles()
+    let listOfNames: [Profile] = profileManager.readProfiles()
     let numOfNames: Int = listOfNames.count
     
     if numOfNames > 1 {
@@ -63,7 +63,7 @@ class SelectUsers: UIViewController {
   
   @IBAction func user3Button(_ sender: Any) {
     
-    let listOfNames: [String] = profileManager.readProfiles()
+    let listOfNames: [Profile] = profileManager.readProfiles()
     let numOfNames: Int = listOfNames.count
     
     if numOfNames > 2 {
@@ -82,7 +82,7 @@ class SelectUsers: UIViewController {
   
   @IBAction func user4Button(_ sender: Any) {
     
-    let listOfNames: [String] = profileManager.readProfiles()
+    let listOfNames: [Profile] = profileManager.readProfiles()
     let numOfNames: Int = listOfNames.count
     
     if numOfNames > 3 {
@@ -100,15 +100,15 @@ class SelectUsers: UIViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     
-    for (index, name) in profileManager.readProfiles().enumerated() {
+    for (index, profile) in profileManager.readProfiles().enumerated() {
       if index == 0 {
-        label1.text = name
+        label1.text = profile.name
       } else if index == 1 {
-        label2.text = name
+        label2.text = profile.name
       } else if index == 2 {
-        label3.text = name
+        label3.text = profile.name
       } else if index == 3 {
-        label4.text = name
+        label4.text = profile.name
       }
     }
   }

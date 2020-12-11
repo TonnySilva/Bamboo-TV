@@ -102,7 +102,10 @@ class TableVc: UITableViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    avatarButton.title = MoviesViewModel.selectedProfile
+      
+    
+    avatarButton.title = MoviesViewModel.selectedProfile?.name
+    
   }
   
   

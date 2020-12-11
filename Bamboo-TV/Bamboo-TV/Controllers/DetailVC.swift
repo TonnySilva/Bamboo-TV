@@ -100,7 +100,14 @@ class DetailVC: UIViewController {
       return
       
     }
+//    // Solución #1: usando solo AVPlayer
+//
+//     // El usuario no podrá interactuar con el vídeo
+//
+//     let player = AVPlayer(url: videoURL)
+//     let playerLayer = AVPlayerLayer(player: player)
     
+//
     
     
     // Solución #2: usando AVPlayerViewController
