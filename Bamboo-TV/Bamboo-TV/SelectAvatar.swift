@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+
 class SelectAvatar: UIViewController , UIImagePickerControllerDelegate {
   
   @IBOutlet var avatarCollection: [UIButton]!

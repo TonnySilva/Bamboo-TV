@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A494A6725506B43007CA56F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A494A6625506B43007CA56F /* Item.swift */; };
+		8A494A6725506B43007CA56F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A494A6625506B43007CA56F /* Profile.swift */; };
 		8A4A22BB254B15870019A11D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A22BA254B15870019A11D /* AppDelegate.swift */; };
 		8A4A22BD254B15870019A11D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A22BC254B15870019A11D /* SceneDelegate.swift */; };
 		8A4A22BF254B15870019A11D /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4A22BE254B15870019A11D /* DetailVC.swift */; };
@@ -33,7 +33,7 @@
 
 /* Begin PBXFileReference section */
 		350F98E05B5AC3788F9BF144 /* Pods-BambooTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BambooTV.debug.xcconfig"; path = "Target Support Files/Pods-BambooTV/Pods-BambooTV.debug.xcconfig"; sourceTree = "<group>"; };
-		8A494A6625506B43007CA56F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		8A494A6625506B43007CA56F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		8A4A22B7254B15870019A11D /* BambooTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BambooTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4A22BA254B15870019A11D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A4A22BC254B15870019A11D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,7 +92,6 @@
 		8A494A6525506AFE007CA56F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8A494A6625506B43007CA56F /* Item.swift */,
 				8A4CFE8E25765AAF008AE545 /* Manager */,
 			);
 			path = Models;
@@ -141,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				8A4CFE8F25765ACB008AE545 /* ProfileManager.swift */,
+				8A494A6625506B43007CA56F /* Profile.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -355,7 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A494A6725506B43007CA56F /* Item.swift in Sources */,
+				8A494A6725506B43007CA56F /* Profile.swift in Sources */,
 				8A4A22BF254B15870019A11D /* DetailVC.swift in Sources */,
 				8A59BD51257637310079EDB7 /* SelectUsers.swift in Sources */,
 				8A4CFE9025765ACB008AE545 /* ProfileManager.swift in Sources */,
