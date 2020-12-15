@@ -23,7 +23,7 @@ class EditarPerfil: UIViewController {
     
     
     
- 
+    
     performSegue(withIdentifier: "goToAvatar", sender: nil)
     
   }
@@ -60,6 +60,11 @@ class EditarPerfil: UIViewController {
   
   @IBOutlet weak var editarLabel: UITextField!
   
+  @IBAction func editarLabelAction(_ sender: UITextField) {
+    
+    MoviesViewModel.selectedProfile?.name
+    
+  }
   
   
   @IBAction func eliminarButton(_ sender: UIButton) {
@@ -118,6 +123,12 @@ class EditarPerfil: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     if let imageName = MoviesViewModel.newAvatarImageName {
       avatarEditionOutlet.setImage(UIImage(named: imageName), for: .normal)
+    }
+    
+    if let profile = MoviesViewModel.selectedProfile {
+      avatarEditionOutlet.setImage(profile.image, for: .normal)
+      
+      editarLabel.text = profile.name
     }
     
     

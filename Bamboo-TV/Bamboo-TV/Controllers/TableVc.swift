@@ -69,6 +69,7 @@ class TableVc: UITableViewController {
   
   
   @IBAction func avatarItem(_ sender: Any) {
+    
     performSegue(withIdentifier: "goToProfileSelection", sender: self)
     
   }
