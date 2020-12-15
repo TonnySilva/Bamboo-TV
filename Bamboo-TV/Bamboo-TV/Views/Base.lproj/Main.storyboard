@@ -399,6 +399,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="button1" destination="WdO-Bj-jbc" id="aGc-B7-fC0"/>
+                        <outlet property="button2" destination="5FQ-Yh-8IL" id="ffJ-VW-uXO"/>
+                        <outlet property="button3" destination="Bd3-6t-bKw" id="V1k-x7-tqO"/>
+                        <outlet property="button4" destination="gZy-e8-yji" id="aNX-tu-DCz"/>
                         <outlet property="label1" destination="DNu-K3-sg9" id="M2m-LR-e5p"/>
                         <outlet property="label2" destination="kHT-eI-LB1" id="MLR-xy-bXs"/>
                         <outlet property="label3" destination="YbE-Gy-qQC" id="5u6-BF-cAg"/>

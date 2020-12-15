@@ -17,6 +17,15 @@ struct Profile: Equatable, Codable {
         return UIImage(named: imageName)
       
     }
+//  concadenar los mini avatares con una variable computada
+  var miniatureImage: UIImage? {
+    return UIImage(named: (imageName + "_mini"))
+  }
+  
+  
+  
+  
+  
     
     static func == (lhs: Self, rhs: Self) -> Bool {
 //        return lhs.id == rhs.id

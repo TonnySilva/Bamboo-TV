@@ -18,6 +18,15 @@ class SelectUsers: UIViewController {
     
   }
   
+  @IBOutlet weak var button1: UIButton!
+  
+  @IBOutlet weak var button2: UIButton!
+  
+  @IBOutlet weak var button3: UIButton!
+  
+  @IBOutlet weak var button4: UIButton!
+  
+  
   
   
   
@@ -25,6 +34,7 @@ class SelectUsers: UIViewController {
   @IBAction func user1Button(_ sender: Any) {
     print("funciona")
     
+//    button1.setImage(profile, for: <#T##UIControl.State#>)
     
     let listOfNames: [Profile] = profileManager.readProfiles()
     let numOfNames: Int = listOfNames.count
@@ -32,6 +42,7 @@ class SelectUsers: UIViewController {
     if numOfNames > 0 {
       
       MoviesViewModel.selectedProfile = listOfNames[0]
+      
       dismiss(animated: true, completion: nil)
     } else {
       performSegue(withIdentifier: "goToDetail", sender: nil)
@@ -103,12 +114,21 @@ class SelectUsers: UIViewController {
     for (index, profile) in profileManager.readProfiles().enumerated() {
       if index == 0 {
         label1.text = profile.name
+//        let img: UIImage? = UIImage(named: profile.imageName)
+        
+        button1.setImage(profile.image, for: .normal)
       } else if index == 1 {
+        
         label2.text = profile.name
+        button2.setImage(profile.image, for: .normal)
+        
       } else if index == 2 {
         label3.text = profile.name
+        button3.setImage(profile.image, for: .normal)
+        
       } else if index == 3 {
         label4.text = profile.name
+        button4.setImage(profile.image, for: .normal)
       }
     }
   }

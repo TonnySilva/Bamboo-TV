@@ -60,8 +60,6 @@ class EditarPerfil: UIViewController {
   
   @IBOutlet weak var editarLabel: UITextField!
   
-//  private let labelListKey: String = "nameKey"
-  
   
   
   @IBAction func eliminarButton(_ sender: UIButton) {
@@ -99,7 +97,7 @@ class EditarPerfil: UIViewController {
     
     guard let nameUserNew: String = editarLabel.text else { return }
     
-    let profile: Profile = Profile(name: nameUserNew, imageName: "avatar_01", id: 0)
+    let profile: Profile = Profile(name: nameUserNew, imageName: MoviesViewModel.newAvatarImageName ?? "avatar_01", id: 0)
   
     profileManager.saveProfile(profile)
     
