@@ -75,7 +75,11 @@ class EditarPerfil: UIViewController {
     
     let action = UIAlertAction(title: "Eliminar", style: UIAlertAction.Style.destructive, handler:
                                 { action in
-//                                  self.profileManager.removeProfiles()
+                    
+                                  if let selectedProfile = MoviesViewModel.selectedProfile {
+                                    self.profileManager.removeProfile(selectedProfile)
+                                  }
+                                  
                                   self.navigationController?.popViewController(animated: true)
                                   UserDefaults.standard.synchronize()
                                   print("Elimino datos")

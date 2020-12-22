@@ -30,6 +30,7 @@ class SelectAvatar: UIViewController , UIImagePickerControllerDelegate {
   }
   
   private func configureAvatarButtons() {
+    
 //    tambien puedo implementar este for - pero swfit te da el enumereted y no hace falta poner el var i = 0
 //    var i = 0
 //    for btn in avatarCollection {

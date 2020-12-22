@@ -9,9 +9,6 @@ import UIKit
 import Alamofire
 
 
-
-
-
 class TableVc: UITableViewController {
   
   //  crear instancia de moviesManager
@@ -99,13 +96,15 @@ class TableVc: UITableViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     showProfileSelectionIfNeeded()
+    
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
       
-    
-    avatarButton.title = MoviesViewModel.selectedProfile?.name
+    avatarButton.image = MoviesViewModel.selectedProfile?.miniatureImage
+//    comento el label del avatar xq pongoi la imagen
+//    avatarButton.title = MoviesViewModel.selectedProfile?.name
     
   }
   
